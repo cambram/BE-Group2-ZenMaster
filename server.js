@@ -36,5 +36,5 @@ app.use('/exercises', exerciseRoutes);
 app.use('/achievements', achievementRoutes);
 
 app.listen(process.env.PORT, () => {
-    console.log('Server is running');
+    console.log(`Server running on port ${process.env.PORT}`);
 });
