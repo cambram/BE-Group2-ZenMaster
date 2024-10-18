@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false, // Only save sessions after user login
     cookie: {
         secure: true,  // Ensures cookies are only sent over HTTPS
         sameSite: 'None', // Required for cross-origin requests
